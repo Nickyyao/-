@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>星星</title>
+	<style type="text/css">
+		html,body,div{
+			margin: 0;
+			padding: 0;
+		}
+		.wrap{
+			position: relative;
+			width: 1000px;
+			margin: 0 auto;
+			font-size: 0;
+		}
+		.stars-bg{
+			text-align: center;
+			margin-top: 20px;
+		}
+		#rabbit{
+			width: 105px;
+			height: 80px;
+			position: absolute;
+			right: 100px;
+			bottom: 90px;
+			background: url(images/rabbit.png) no-repeat 0 0;
+			/*transition: right 0.2s 0s;*/
+		}
+		.audio-bg{
+			width: 40px;
+			height: 40px;
+			background: url(images/musicbtn.png) no-repeat -16px -3px;
+			position: absolute;
+			border-radius: 20px;
+			bottom: 20px;
+			right: 20px;
+			cursor: pointer;
+		}
+		.audio-bg audio{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	</style>
+	<script type="text/javaScript" src="js/stars and rabbit.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div class="stars-bg">
+		<canvas id="stars" width="1000px" height="600px">
+			当前浏览器不支持canvas，请更换浏览器后查看
+		</canvas>
+	</div>
+	<div id="rabbit"></div>
+	<div class="audio-bg">
+		<audio id="music" title="播放背景音乐">
+			<source src="chengdu.ogg" type="audio/ogg">	<!-- Firefox下 -->
+			<source src="chengdu.mp3" type="audio/mp3">  <!-- ie下 -->
+			Your browser does not support the audio element.
+		</audio>
+	</div>
+	
+</div>
+</body>
+</html>
